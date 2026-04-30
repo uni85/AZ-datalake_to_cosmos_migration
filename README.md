@@ -14,7 +14,7 @@ The solution implements a **Medallion Architecture**:
 The entire solution was deployed in the `Canada Central` region[cite: 1, 2]. 
 
 **Provisioned Resources:**
-![Azure Resource Group Overview](resources.png)
+![Azure Resource Group Overview](images/resources.png)
 *   **Orchestration**: Azure Data Factory (ADF) `adf-final-lab`[cite: 1]
 *   **Storage**: ADLS Gen2 `stfinallab`[cite: 5]
 *   **Database**: Cosmos DB `cosmos-final-lab`[cite: 6]
