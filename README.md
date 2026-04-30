@@ -45,4 +45,6 @@ The final output is stored in Cosmos DB, partitioned by `city` for optimized que
 *   `/factory/pipelines/`: JSON definitions for the ADF pipelines[cite: 7].
 *   `/factory/datasets/`: Definitions for ADLS and Cosmos DB datasets[cite: 3, 4].
 *   `/factory/linkedServices/`: Connection metadata[cite: 5, 6].
+*   `/images/`
+*   `/factory/labinfo/`
 *   `app.py`: Python script used to simulate the bike station API.
