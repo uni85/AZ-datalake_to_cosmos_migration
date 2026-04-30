@@ -1,0 +1,6 @@
+selected resource name:		pl_load_datalake_to_cosmos
+selected resource type:		pipeline
+factory name:			adf-final-lab
+factory location:		canadacentral
+subscription id:		110d8e13-3505-41c3-92cd-7927faa4de6b
+time of download (UTC):		Thu, 30 Apr 2026 13:13:00 GMT

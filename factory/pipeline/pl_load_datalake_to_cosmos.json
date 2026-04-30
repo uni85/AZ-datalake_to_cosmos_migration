@@ -1,0 +1,106 @@
+{
+    "name": "pl_load_datalake_to_cosmos",
+    "properties": {
+        "activities": [
+            {
+                "name": "Copy data1",
+                "type": "Copy",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "source": {
+                        "type": "JsonSource",
+                        "storeSettings": {
+                            "type": "AzureBlobFSReadSettings",
+                            "recursive": true,
+                            "wildcardFileName": "*.json",
+                            "enablePartitionDiscovery": false
+                        },
+                        "formatSettings": {
+                            "type": "JsonReadSettings"
+                        }
+                    },
+                    "sink": {
+                        "type": "CosmosDbSqlApiSink",
+                        "writeBehavior": "insert"
+                    },
+                    "enableStaging": false,
+                    "translator": {
+                        "type": "TabularTranslator",
+                        "mappings": [
+                            {
+                                "source": {
+                                    "path": "$['id']"
+                                },
+                                "sink": {
+                                    "path": "id"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['station_id']"
+                                },
+                                "sink": {
+                                    "path": "station_id"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['city']"
+                                },
+                                "sink": {
+                                    "path": "city"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['available_bikes']"
+                                },
+                                "sink": {
+                                    "path": "available_bikes"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['total_docks']"
+                                },
+                                "sink": {
+                                    "path": "total_docks"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['timestamp']"
+                                },
+                                "sink": {
+                                    "path": "timestamp"
+                                }
+                            }
+                        ],
+                        "collectionReference": ""
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "ds_bronze_bikes_json",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "ds_cosmos_bikes",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ],
+        "annotations": []
+    }
+}

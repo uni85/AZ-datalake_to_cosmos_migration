@@ -1,0 +1,12 @@
+{
+    "name": "ls_cosmos_bikes",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "CosmosDb",
+        "typeProperties": {
+            "connectionString": "AccountEndpoint=https://cosmos-final-lab.documents.azure.com:443/;Database=BikeAppDB;",
+            "encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEY1RTYzRkVCLTlCNTAtNEY2RC1BNEM0LURBNDk1NjJFQUNGOV83NTM5OTY1MC0yYzgyLTQxYTktODgxNi1kMDkyMjdhNGMxOGQiDQp9"
+        }
+    }
+}

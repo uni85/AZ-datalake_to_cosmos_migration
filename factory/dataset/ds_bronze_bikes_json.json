@@ -1,0 +1,23 @@
+{
+    "name": "ds_bronze_bikes_json",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "ls_datalake",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": {
+                    "value": "@concat('bikes_', formatDateTime(utcNow(), 'yyyyMMdd_HHmmss'), '.json')",
+                    "type": "Expression"
+                },
+                "folderPath": "bronze/bikes",
+                "fileSystem": "data"
+            }
+        },
+        "schema": {}
+    }
+}
