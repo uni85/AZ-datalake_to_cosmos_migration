@@ -1,4 +1,4 @@
-# Azure End-to-End Data Engineering: Real-Time IoT Ingestion
+# Azure End-to-End Data Engineering: Real-Time IoT Ingestion 
 
 This repository contains the architecture and configuration for a scalable data pipeline built on Microsoft Azure. The project simulates a real-world IoT scenario, ingesting bike-sharing telemetry data from a custom API into a cloud-native serving layer.
 
